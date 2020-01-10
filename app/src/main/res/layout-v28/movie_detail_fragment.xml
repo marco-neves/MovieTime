@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/single_movie_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/movie_icon_imageview"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/my_delimiter_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delimiter_text"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/movie_release_date_textview"
+        app:layout_constraintEnd_toStartOf="@+id/movie_rating_textview"
+        app:layout_constraintTop_toBottomOf="@+id/movie_icon_imageview" />
+
+    <TextView
+        android:id="@+id/movie_title_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/movie_description_textview"
+        app:layout_constraintEnd_toStartOf="@+id/movie_icon_imageview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Lion King" />
+
+    <TextView
+        android:id="@+id/movie_release_date_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:textStyle="italic"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/movie_icon_imageview"
+        app:layout_constraintTop_toBottomOf="@id/movie_icon_imageview"
+        tools:text="01-01-2001" />
+
+    <TextView
+        style="@style/scrollbar_shape_style"
+        android:id="@+id/movie_description_textview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:scrollbars="vertical"
+        android:textAlignment="textStart"
+        android:textFontWeight="@android:integer/config_shortAnimTime"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        android:background="@drawable/grey_gradient"
+        app:layout_constraintBottom_toTopOf="@id/base_image_imageview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_rating_textview"
+        tools:text="This is where the movie description goes" />
+
+    <TextView
+        android:id="@+id/movie_rating_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/my_delimiter_textview"
+        app:layout_constraintTop_toBottomOf="@+id/movie_icon_imageview"
+        tools:text="9.9" />
+
+    <ImageView
+        android:id="@+id/base_image_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

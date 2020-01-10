@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".view.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/main_label_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_label_text"
+        android:background="@color/colorAccent"
+        android:textSize="32sp"
+        android:padding="@dimen/dimen_8dp"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/my_search_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/text_color"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:hint="@string/search_box_text"
+        android:textColorHint="@color/text_color"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/send_button"
+        app:layout_constraintTop_toBottomOf="@id/main_label_textview" />
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/my_search_edittext"
+        app:layout_constraintTop_toBottomOf="@id/main_label_textview"
+        android:onClick="onClick"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movie_list_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_search_edittext"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

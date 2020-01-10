@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movie Time</string>
+    <string name="search">Search</string>
+    <string name="search_box_text">Search movie&#8230; </string>
+    <string name="main_label_text">A Movie Database</string>
+    <string name="rating_label">Rating: </string>
+    <string name="delimiter_text">||</string>
+</resources>
